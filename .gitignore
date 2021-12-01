@@ -9,6 +9,7 @@
 
 # Binary directory
 bin/
+build/
 
 # Precompiled Headers
 *.gch
