@@ -7,7 +7,7 @@ enable_testing()
 
 add_executable(GeneratorTest GeneratorTest.cpp)
 
-target_link_libraries(GeneratorTest gtest_main)
+target_link_libraries(GeneratorTest gtest_main Generator)
 
 include(GoogleTest)
 gtest_discover_tests(GeneratorTest)

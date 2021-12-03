@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "lldb",
             "request": "launch",
@@ -13,6 +12,22 @@
             "args": ["5"],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "build-debug"
-        }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Unit Test",
+            "program": "${workspaceFolder}/build/unit_test",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build-debug"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Generator Test",
+            "program": "${workspaceFolder}/build/Generator/GeneratorTest",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build-debug"
+        },
     ]
 }
