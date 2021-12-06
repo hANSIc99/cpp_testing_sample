@@ -20,7 +20,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # add the executable
-add_executable(Producer producer.cpp)
+add_executable(Producer Producer.cpp)
 
 # alternative cmake -DCMAKE_BUILD_TYPE=Debug <path and other arguments>
 #set(CMAKE_BUILD_TYPE Debug) // funcktioniert nicht
