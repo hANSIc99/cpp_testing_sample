@@ -2,10 +2,6 @@
 #include <sstream>
 #include "Generator.h"
 
-
-// cmake -DCMAKE_BUILD_TYPE=Debug .
-// cmake -DCMAKE_BUILD_TYPE=Release .
-
 int main(int argc, char** argv)
 {
     if (argc != 2) {

@@ -28,6 +28,6 @@
             "program": "${workspaceFolder}/build/Generator/GeneratorTest",
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "build-debug"
-        },
+        }
     ]
 }
