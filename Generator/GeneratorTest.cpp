@@ -42,13 +42,8 @@ TEST(GeneratorTest, Shuffle){
   std::stringstream buffer_A;
   std::stringstream buffer_B;
 
-  
-
   Generator::generate(buffer_A, NumberOfElements);
   Generator::generate(buffer_B, NumberOfElements);
-
-  std::string s_a = buffer_A.str();
-  std::string s_b = buffer_B.str();
 
   EXPECT_NE(buffer_A.str(), buffer_B.str());
 }
