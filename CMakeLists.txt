@@ -16,7 +16,6 @@ FetchContent_Declare(
   URL https://github.com/google/googletest/archive/bb9216085fbbf193408653ced9e73c61e7766e80.zip
 )
 
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # add the executable
@@ -25,7 +24,8 @@ add_executable(Producer Producer.cpp)
 # alternative cmake -DCMAKE_BUILD_TYPE=Debug <path and other arguments>
 #set(CMAKE_BUILD_TYPE Debug) // funcktioniert nicht
 
-# add library
+
+# specify dependecies
 target_link_libraries(Producer PUBLIC Generator)
 
 # specifz include directories

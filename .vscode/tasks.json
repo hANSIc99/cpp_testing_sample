@@ -4,7 +4,10 @@
         {
             "label": "build-debug",
             "type": "shell",
-            "command": "cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make"
+            "command": "cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make",
+            "windows": {
+                "command": "cmake -S . -B build && cmake --build build"
+            }
         }
     ]
 }

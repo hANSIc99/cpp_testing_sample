@@ -9,7 +9,7 @@ TEST(HelloTest, BasicAssertions) {
 }
 
 
-TEST(Test2, bla){
-  EXPECT_EQ(1, 2);
-}
+// TEST(Test2, bla){
+//   EXPECT_EQ(1, 2);
+// }
 

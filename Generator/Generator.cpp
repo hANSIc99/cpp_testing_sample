@@ -8,7 +8,10 @@ std::stringstream &Generator::generate(std::stringstream &stream, const int rang
     std::vector<int> data(range);
     std::iota(data.begin(), data.end(), 1);
 
-    std::shuffle(data.begin(), data.end(), std::default_random_engine{});
+    std::random_device rd;
+    std::mt19937 g(rd());
+
+    std::shuffle(data.begin(), data.end(), g);
 
     for (const auto n : data) {
 
