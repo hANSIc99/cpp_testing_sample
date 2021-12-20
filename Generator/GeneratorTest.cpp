@@ -22,17 +22,18 @@ TEST(GeneratorTest, ReferenceCheck){
 TEST(GeneratorTest, NumberOfElements){
 
   const int NumberOfElements = 50;
+  int nCalcNoElements = 0;
   std::stringstream buffer;
 
   Generator::generate(buffer, NumberOfElements);
-  // Output vektor
-  std::vector<std::string> vNumbers;
+
   std::string s_no;
+
   while(std::getline(buffer, s_no, ' ')) {
-    vNumbers.push_back(s_no);
+    nCalcNoElements++;
   }
 
-  EXPECT_EQ(vNumbers.size(), NumberOfElements);
+  EXPECT_EQ(nCalcNoElements, NumberOfElements);
 }
 
 TEST(GeneratorTest, Shuffle){
