@@ -55,9 +55,9 @@ TEST(GeneratorTest, CheckSum){
   const int NumberOfElements = 50;
   int nChecksum_in = 0;
   int nChecksum_out = 0;
-  // Input vector
-  std::vector<int> vNumbersRef(NumberOfElements);
-  std::iota(vNumbersRef.begin(), vNumbersRef.end(), 1);
+  
+  std::vector<int> vNumbersRef(NumberOfElements); // Input vector
+  std::iota(vNumbersRef.begin(), vNumbersRef.end(), 1); // Populate vector
   
   // Calculate reference checksum
   for(const int n : vNumbersRef){
@@ -68,9 +68,11 @@ TEST(GeneratorTest, CheckSum){
 
   Generator::generate(buffer, NumberOfElements);
 
-  // Output vektor
-  std::vector<int> vNumbersGen;
+
+  std::vector<int> vNumbersGen; // Output vector
   std::string s_no;
+
+  // Read the buffer back to the output vector
   while(std::getline(buffer, s_no, ' ')) {
     vNumbersGen.push_back(std::stoi(s_no));
   }

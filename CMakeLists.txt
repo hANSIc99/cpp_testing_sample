@@ -39,10 +39,17 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 enable_testing()
 
-add_executable(unit_test unit_test.cpp)
-
-target_link_libraries(unit_test gtest_main)
-
-include(GoogleTest)
-gtest_discover_tests(unit_test)
+add_test(NAME RegularUsage COMMAND Producer 10)
+set_tests_properties(RegularUsage
+  PROPERTIES PASS_REGULAR_EXPRESSION "^[0-9 ]+"
+  )
                            
+add_test(NAME NoArg COMMAND Producer)
+set_tests_properties(NoArg
+  PROPERTIES PASS_REGULAR_EXPRESSION "^Enter the number of elements as argument"
+  )
+
+add_test(NAME WrongArg COMMAND Producer ABC)
+set_tests_properties(WrongArg
+  PROPERTIES PASS_REGULAR_EXPRESSION "^Error: Cannot parse"
+  )

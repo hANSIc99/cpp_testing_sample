@@ -17,7 +17,7 @@ int main(int argc, char** argv)
     }
     catch (const std::invalid_argument&)
     {
-        std::cerr << "Error: Cannot parse \"" << argv[1] << "\" ";
+        std::cerr << "Error: Cannot parse \"" << argv[1] << "\" " << std::endl;
         return -1;
     }
     catch (const std::out_of_range&) {
@@ -26,7 +26,7 @@ int main(int argc, char** argv)
     }
     
     if (range <= 0) {
-        std::cerr << "Error: Zero or negative number provided: " << argv[1];
+        std::cerr << "Error: Zero or negative number provided: " << argv[1] << std::endl;
         return -1;
     }
 
