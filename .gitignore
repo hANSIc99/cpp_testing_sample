@@ -10,6 +10,7 @@
 # Binary directory
 bin/
 build/
+.cache/
 
 # Precompiled Headers
 *.gch
