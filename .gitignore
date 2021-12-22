@@ -10,8 +10,12 @@
 # Binary directory
 bin/
 build/
-.cache/
 
+## clangd extension VSCodium
+.cache/ 
+
+# optional
+#.vscode/
 # Precompiled Headers
 *.gch
 *.pch

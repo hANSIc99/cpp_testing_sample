@@ -53,3 +53,8 @@ add_test(NAME WrongArg COMMAND Producer ABC)
 set_tests_properties(WrongArg
   PROPERTIES PASS_REGULAR_EXPRESSION "^Error: Cannot parse"
   )
+
+add_test(NAME NegativeNo COMMAND Producer -3)
+set_tests_properties(NegativeNo
+  PROPERTIES PASS_REGULAR_EXPRESSION "^Error: Zero or negative number provided: "
+  )
