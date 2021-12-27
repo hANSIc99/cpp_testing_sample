@@ -11,6 +11,9 @@
 bin/
 build/
 
+# CTest
+Testing/
+
 ## clangd extension VSCodium
 .cache/ 
 
