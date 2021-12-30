@@ -16,6 +16,15 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug Consumer",
+            "program": "${workspaceFolder}/build/Consumer",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "make-data",
+
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug Unit Test",
             "program": "${workspaceFolder}/build/unit_test",
             "cwd": "${workspaceFolder}",

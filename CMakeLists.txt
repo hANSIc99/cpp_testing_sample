@@ -20,7 +20,7 @@ FetchContent_MakeAvailable(googletest)
 
 # add the executable
 add_executable(Producer Producer.cpp)
-
+add_executable(Consumer Consumer.cpp)
 # alternative cmake -DCMAKE_BUILD_TYPE=Debug <path and other arguments>
 #set(CMAKE_BUILD_TYPE Debug) // funcktioniert nicht
 
@@ -38,7 +38,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 enable_testing()
 
-#
 
 add_test(NAME RegularUsage COMMAND Producer 10)
 set_tests_properties(RegularUsage

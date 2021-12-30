@@ -8,6 +8,13 @@
             "windows": {
                 "command": "cmake -S . -B build && cmake --build build"
             }
+        },
+        {
+            "label": "make-data",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/Producer 5 > ${workspaceFolder}/build/data.txt",
+            "dependsOn" :["build-debug"]
         }
+
     ]
 }
